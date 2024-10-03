@@ -12,3 +12,8 @@
 input:focus {
     border: 2px solid rgb(95, 95, 240);
 }
+
+html,
+body {
+    height: 100%;
+}

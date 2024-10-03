@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Home from "./pages/Home";
-import CreateProject from "./pages/CreateProject";
+import CreateAccount from "./pages/CreateAccount";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -11,7 +11,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/createproject" element={<CreateProject />} />
+        <Route path="/createaccount" element={<CreateAccount />} />
       </Routes>
     </Router>
   </React.StrictMode>
