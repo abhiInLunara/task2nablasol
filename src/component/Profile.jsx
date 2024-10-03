@@ -20,6 +20,7 @@ const Profile = ({ formData, handleChange }) => {
             required
             placeholder="Enter Your First Name"
             id="firstName"
+            onChange={handleChange}
           />
         </div>
         <div className="flex flex-col gap-2 ">
@@ -31,6 +32,7 @@ const Profile = ({ formData, handleChange }) => {
             placeholder="Enter Your Last Name"
             name="lasstName"
             id="lasstName"
+            onChange={handleChange}
           />
         </div>
         <div className="flex flex-col gap-2 ">

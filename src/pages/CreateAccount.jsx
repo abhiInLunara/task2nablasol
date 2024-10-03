@@ -8,8 +8,19 @@ import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
 const CreateAccount = () => {
-  const [formData, setFormData] = useState({});
-  const totalPages = 2;
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    password: "",
+    brandName: "",
+    brandType: "",
+    address: "",
+    city: "",
+    zipcode: "",
+    taxID: "",
+  });
   const pages = ["Your Profile", "Business Information"];
 
   const [currentStep, setCurrentStep] = useState(1);
@@ -96,12 +107,21 @@ const CreateAccount = () => {
               </button>
             )}
             {currentStep === 2 && (
-              <button
-                className="px-8 bg-blue-700  py-1 rounded-md text-white font-normal"
-                onClick={handleSubmit}
-              >
-                Submit
-              </button>
+              <>
+                <button
+                  onClick={prevStep}
+                  className="px-2 mr-2 text-blue-600 py-1 rounded-md border border-blue-600 ng-white font-normal"
+                >
+                  <FaLessThan className="mr-1 inline  h-3 w-3" />
+                  Previous Step
+                </button>
+                <button
+                  className="px-8 bg-blue-700  py-1 rounded-md text-white font-normal"
+                  onClick={handleSubmit}
+                >
+                  Submit
+                </button>
+              </>
             )}
           </div>
         </div>
